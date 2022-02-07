@@ -1,5 +1,5 @@
 
-export interface Content {
+export interface Car {
     id: number;
     title: string;
     description: string;

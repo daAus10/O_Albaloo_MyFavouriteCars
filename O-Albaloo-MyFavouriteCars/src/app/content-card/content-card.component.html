@@ -1,4 +1,13 @@
-<div [innerHTML]="list.generateHtml(0)"></div>
-<div [innerHTML]="list.generateHtml(1)"></div>
-<div [innerHTML]="list.generateHtml(2)"></div>
-<div [innerHTML]="list.generateHtml(3)"></div>
+<img *ngIf="showCars?.imgURL" (click)="logId()" [src]="showCars?.imgURL">
+<h1>{{ showCars?.carName}}</h1>
+<p class="description">{{ showCars?.description }}</p>
+<div class="meta-data">
+  <div class="author-info">
+    <span class="maker">{{ showCars?.maker }}</span>
+    <span *ngIf="showCars?.bodyStyle" class="type">{{ showCars?.bodyStyle }}</span>
+  </div>
+  <div *ngIf="showCars?.tags" class="tags">
+
+    <span class="tag" *ngFor="let tag of showCars?.tags">{{ tag }}</span>
+  </div>
+</div>

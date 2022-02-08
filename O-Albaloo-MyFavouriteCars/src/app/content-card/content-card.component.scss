@@ -1,0 +1,52 @@
+:host{
+
+    border: 1px solid rgb(0, 0, 0);
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+background-color:  rgb(19, 16, 214);;
+  &.is-first{
+    border: 2px solid rgb(0, 0, 0);
+
+
+  
+  }
+  
+  img{
+    margin: 10px;
+    max-width: 350px;
+  }
+
+  .maker,.type,.tags{
+    margin: 8px 16px 8px 0;
+  }
+  .author-info{
+    height: 24px;
+  }
+  .maker{
+margin-right: 16px;
+  }
+  .bodyStyle{
+margin-left: 16px auto;
+  }
+  .tags{
+    color: rgb(134, 21, 21);
+    font-size: 33px;
+
+    
+        .tag{
+margin: 16px;
+background-color: chocolate;
+        }
+    
+    margin: 16px 0;
+
+    &.is-last{
+        font-weight: bold;
+        border: 2px solid rgb(146, 43, 43);
+    
+      }
+  }
+ 
+  
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Car } from './helper-files/Car';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'O_Albaloo_MyFavouriteCars';
+
+  constructor() {
+
+}
 }

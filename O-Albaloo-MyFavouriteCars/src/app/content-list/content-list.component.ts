@@ -7,81 +7,65 @@ import { Car } from '../helper-files/Car';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
-  @Input() superCars?: Car[];
+ 
 showCars: Car[]
   constructor() {
-    let car1: Car;
-    let car2: Car;
-    let car3: Car; 
-    let car4: Car; 
-    let car5: Car; 
-    let car6: Car; 
 
-
-
-
-car1 = {
+    this.showCars = [
+     {
   id: 0,
-  type: "Hatchback",
-  title: "Focus RS",
-  creator: "Ford",
+  bodyStyle: "Hatchback",
+  carName: "Focus RS",
+  maker: "Ford",
   imgURL: "https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/04/ford-focus-rs-cancelled-e1587591676319.jpg",
   description: "Tiny but mighty",
   tags: ['fast', 'beautiful', 'reliable']
-};
-car2 = {
+}, {
   id: 1,
-  creator: "Ford",
-  type: 'SUV',
-  title: 'Escape SE',
-  imgURL: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.avalonford.com%2Fpre-owned%2Fford%2Fescape%2F2017-white-se---4wd-25718635.html&psig=AOvVaw1xsTLtWbZu41ZaD573hywP&ust=1644283112886000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJiyrIq27PUCFQAAAAAdAAAAABAD",
+  maker: "Ford",
+  bodyStyle: 'SUV',
+  carName: 'Escape SE',
+  imgURL: "https://blogmedia.dealerfire.com/wp-content/uploads/sites/275/2017/07/2017-Ford-Escape-exterior-White-Gold_o.jpg",
   description: "big enough for everyone",
   tags: ['big', 'spacious', 'turbo']
 
-};
-
-car3 = {
+}, {
   id: 2,
-  creator: "Tesla",
-  type: 'Sedan',
-  title: 'Model S',
+  maker: "Tesla",
+  bodyStyle: 'Sedan',
+  carName: 'Model S',
   imgURL: 'https://electrek.co/wp-content/uploads/sites/3/2021/01/Tesla-Model-S-Plaid.jpg?quality=82&strip=all',
   description: "Careful, it might shock you",
   tags: ['Electric', 'clean', 'quick']
-    };
-
-
-    car4 = {
-      id: 3,
-      creator: "Tesla",
-      type: 'Sedan',
-      title: 'Model S',
-      imgURL: 'https://electrek.co/wp-content/uploads/sites/3/2021/01/Tesla-Model-S-Plaid.jpg?quality=82&strip=all',
-      description: "Careful, it might shock you",
-      tags: ['Electric', 'clean', 'quick']
-        };
- car5 = {
+    },
+     {
+        id: 3,
+      maker: "Chevorlet",
+      bodyStyle: 'SUV',
+      carName: 'Equinox',
+      imgURL: 'https://cdn.motor1.com/images/mgl/7M1mW/s3/2021-chevy-equinox-leak.jpg',
+      description: "a new era of SUVs",
+      tags: ['Hybrid', 'economy', 'fresh']
+        }, 
+        {
       id: 4,
-      creator: "Tesla",
-      type: 'Sedan',
-      title: 'Model S',
-      imgURL: 'https://electrek.co/wp-content/uploads/sites/3/2021/01/Tesla-Model-S-Plaid.jpg?quality=82&strip=all',
-      description: "Careful, it might shock you",
-      tags: ['Electric', 'clean', 'quick']
-        };
-
-        car6 = {
+      maker: "Dodge",
+      bodyStyle: 'Coupe',
+      carName: 'Challenger R/T',
+      imgURL: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2021-dodge-challenger-mmp-1-1599685173.jpg?crop=0.732xw:1.00xh;0.0224xw,0&resize=640:*',
+      description: "as fast as a bullet",
+      tags: ['2doors', 'boat', 'crazy']
+        },
+         {
           id: 5,
-          creator: "Tesla",
-          type: 'Sedan',
-          title: 'Model S',
-          imgURL: 'https://electrek.co/wp-content/uploads/sites/3/2021/01/Tesla-Model-S-Plaid.jpg?quality=82&strip=all',
-          description: "Careful, it might shock you",
-          tags: ['Electric', 'clean', 'quick']
-            };
+          maker: "Chevorlet",
+          bodyStyle: 'Coupe',
+          carName: 'Camaro RS',
+          imgURL: 'https://hips.hearstapps.com/roa.h-cdn.co/assets/16/23/1465220092-camaro-bumblebee.jpg',
+          description: "it can eat a Mustang",
+          tags: ['v8', 'yellow', 'transforms']
+         }];
           
-
-            this.showCars = [car1,car2,car3,car4,car5,car6];
 }
   ngOnInit(): void {
     throw new Error('Method not implemented.');

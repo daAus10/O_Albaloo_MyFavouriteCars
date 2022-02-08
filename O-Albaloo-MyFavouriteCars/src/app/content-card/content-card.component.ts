@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ContentListComponent } from '../content-list/content-list.component';
 import { Car } from '../helper-files/Car';
 
 @Component({
@@ -9,7 +8,7 @@ import { Car } from '../helper-files/Car';
 })
 export class ContentCardComponent implements OnInit {
 
-  @Input() carShow?: Car;
+  @Input() showCars?: Car;
 
   constructor() {
     
@@ -19,5 +18,9 @@ export class ContentCardComponent implements OnInit {
   ngOnInit(): void {
    
   }
+  logId(): void{
+    console.log("id: ", this.showCars?.id, " | title is: ", this.showCars?.carName);
+  }
+
 }
   

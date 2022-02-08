@@ -1,10 +1,10 @@
 
 export interface Car {
     id: number;
-    title: string;
+    carName: string;
     description: string;
-    creator: string;
+    maker: string;
     imgURL?: string;
-    type?: string;
+    bodyStyle?: string;
     tags?: string[];
 }

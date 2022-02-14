@@ -1,0 +1,53 @@
+.true{
+    font-weight: bolder;
+    color: green;
+}
+.false{
+    font-weight: bolder;
+    color: rgb(235, 8, 8);   
+}
+
+.Ford{
+
+    background-color: rgba(12, 106, 182, 0.733);
+
+}
+.Dodge{
+
+    background-color: rgba(223, 22, 15, 0.733);
+}
+.BMW{
+
+    background-color: rgba(15, 223, 77, 0.733);
+}
+.Chevorlet{
+
+    background-color: rgba(211, 199, 27, 0.733);
+}
+h3{
+
+    text-align: center;
+    border: 5px solid black;
+}
+h3:nth-of-type(2){
+    background-color: rgba(12, 106, 182, 0.733);
+    margin-bottom: 0px;
+}
+
+h3:nth-of-type(3){
+    background-color: rgba(211, 199, 27, 0.733);
+    margin-bottom: 0px;
+}
+h3:nth-of-type(4){
+    background-color: rgba(223, 22, 15, 0.733);
+    margin-bottom: 0px;
+}
+
+h3:nth-of-type(5){
+    background-color: rgba(15, 223, 77, 0.733);
+    margin-bottom: 0px;
+}
+.searchBar{
+
+    align-items: center;
+}

@@ -1,22 +1,31 @@
  
  <h3>search by the maker of the car</h3>
- <input #findMaker><button (click) = "searchFunc(findMaker.value)">search</button><br><br>
+ <input #findMaker class="searchBar"><button (click) = "searchFunc(findMaker.value)">search</button><br><br>
 
- <div *ngIf = "searchFunc(findMaker.value) === 'null'"></div>
- <div *ngIf = "searchFunc(findMaker.value) === 'nope'" class="notexists">{{findMaker.value}} does not Exists</div>
- <div *ngIf = "searchFunc(findMaker.value) === 'yep'" class="exists">{{findMaker.value}} Exists</div>
+ <div *ngIf = "searchFunc(findMaker.value) === 'nope'" class="false">{{findMaker.value}} does not Exists</div>
+ <div *ngIf = "searchFunc(findMaker.value) === 'yep'" class="true">{{findMaker.value}} Exists</div>
 
-<app-content-card
+<!-- <app-content-card
 *ngFor="let car of (showCars | filterPipe); first as isTheFirstElement"[showCars]="car" [class.is-first]="isTheFirstElement">
                 
 
-                </app-content-card>
+                </app-content-card> -->
 
 
-                <!-- <app-content-card *ngFor="let car of (Car | filterPipe ); 
+                <app-content-card *ngFor="let car of (showCars | filterPipe ); 
                 index as i; first as isFirst"
                 [showCars]="car" [class.is-first]="isFirst" class="notag"></app-content-card>
-
-                 <app-content-card *ngFor="let car of (Car | filterPipe); index as i; first as isFirst"
+<h3>Built Tough</h3> 
+                 <app-content-card *ngFor="let car of (showCars | filterPipe : 'Ford'); index as i; first as isFirst"
                 [showCars]="car" [class.is-first]="isFirst" class="Ford"></app-content-card> 
-                   -->
+                <h3>Find New Roads</h3> 
+
+                <app-content-card *ngFor="let car of (showCars | filterPipe : 'Chevorlet'); index as i; first as isFirst"
+                [showCars]="car" [class.is-first]="isFirst" class="Chevorlet"></app-content-card> 
+                <h3>If you ain't first, you're last</h3>
+                <app-content-card *ngFor="let car of (showCars | filterPipe : 'Dodge'); index as i; first as isFirst"
+                [showCars]="car" [class.is-first]="isFirst" class="Dodge"></app-content-card> 
+<h3>Sheer Driving Pleasure</h3>
+                  <app-content-card *ngFor="let car of (showCars | filterPipe : 'BMW'); index as i; first as isFirst"
+                [showCars]="car" [class.is-first]="isFirst" class="BMW"></app-content-card> 
+                  

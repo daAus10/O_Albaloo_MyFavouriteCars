@@ -7,8 +7,14 @@ import { Car } from '../helper-files/Car';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
+ @Input()
+ showCars: Car[]
+  Car: any;
+  Display(i: number){
+    console.log(this.Car.id[i]);
+    console.log(this.Car.maker[i]);
+  }
  
-showCars: Car[]
   constructor() {
 
     this.showCars = [
@@ -27,7 +33,7 @@ showCars: Car[]
   carName: 'Escape SE',
   imgURL: "https://blogmedia.dealerfire.com/wp-content/uploads/sites/275/2017/07/2017-Ford-Escape-exterior-White-Gold_o.jpg",
   description: "big enough for everyone",
-  tags: ['big', 'spacious', 'turbo']
+ tags: ['big', 'spacious', 'turbo']
 
 }, {
   id: 2,
@@ -64,8 +70,31 @@ showCars: Car[]
           imgURL: 'https://hips.hearstapps.com/roa.h-cdn.co/assets/16/23/1465220092-camaro-bumblebee.jpg',
           description: "it can eat a Mustang",
           tags: ['v8', 'yellow', 'transforms']
+         },
+         {
+          id: 6,
+          maker: "BMW",
+          bodyStyle: 'Sedan',
+          carName: 'E46',
+          imgURL: 'https://cdn.shopify.com/s/files/1/0570/5518/3000/articles/bmw_e46.jpg?v=1626327927',
+          description: "Check Engine is a Must",
+          tags: ['german', 'problems', 'unreliable']
          }];
           
+}
+searchFunc(searchString : String): String{
+
+  var result = 'nope';
+  if(searchString.length == 0){
+    result = 'null';
+  }
+  for(var car of this.showCars ){
+ 
+    if(car.maker === searchString){
+      result = "yep";
+    }
+  }
+  return result;
 }
   ngOnInit(): void {
     throw new Error('Method not implemented.');

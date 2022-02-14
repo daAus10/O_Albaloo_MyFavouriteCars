@@ -1,2 +1,22 @@
-<app-content-card *ngFor="let car of showCars; first as isTheFirstElement"
-                  [showCars]="car" [class.is-first]="isTheFirstElement"></app-content-card>
+ 
+ <h3>search by the maker of the car</h3>
+ <input #findMaker><button (click) = "searchFunc(findMaker.value)">search</button><br><br>
+
+ <div *ngIf = "searchFunc(findMaker.value) === 'null'"></div>
+ <div *ngIf = "searchFunc(findMaker.value) === 'nope'" class="notexists">{{findMaker.value}} does not Exists</div>
+ <div *ngIf = "searchFunc(findMaker.value) === 'yep'" class="exists">{{findMaker.value}} Exists</div>
+
+<app-content-card
+*ngFor="let car of (showCars | filterPipe); first as isTheFirstElement"[showCars]="car" [class.is-first]="isTheFirstElement">
+                
+
+                </app-content-card>
+
+
+                <!-- <app-content-card *ngFor="let car of (Car | filterPipe ); 
+                index as i; first as isFirst"
+                [showCars]="car" [class.is-first]="isFirst" class="notag"></app-content-card>
+
+                 <app-content-card *ngFor="let car of (Car | filterPipe); index as i; first as isFirst"
+                [showCars]="car" [class.is-first]="isFirst" class="Ford"></app-content-card> 
+                   -->

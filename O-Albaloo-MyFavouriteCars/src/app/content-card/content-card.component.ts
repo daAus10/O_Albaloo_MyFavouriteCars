@@ -8,7 +8,8 @@ import { Car } from '../helper-files/Car';
 })
 export class ContentCardComponent implements OnInit {
 
-  @Input() showCars?: Car;
+  @Input() 
+  showCars?: Car;
 
   constructor() {
     

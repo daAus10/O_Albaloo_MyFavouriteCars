@@ -77,9 +77,18 @@ export class ContentListComponent implements OnInit {
           bodyStyle: 'Sedan',
           carName: 'E46',
           imgURL: 'https://cdn.shopify.com/s/files/1/0570/5518/3000/articles/bmw_e46.jpg?v=1626327927',
-          description: "Check Engine is a Must",
+          description: "Check Engine is a Feature",
           tags: ['german', 'problems', 'unreliable']
-         }];
+         },
+       
+         {id: 7,
+         maker: "BMW",
+         bodyStyle: 'Sedan',
+         carName: 'X5',
+         imgURL: '',
+         description: "Check Engine is a Must",
+         tags: ['bigger', 'stylish', 'transmission']
+        }];
           
 }
 searchFunc(searchString : String): String{

@@ -1,13 +1,28 @@
 <img *ngIf="showCars?.imgURL" (click)="logId()" [src]="showCars?.imgURL">
 <h1>{{ showCars?.carName}}</h1>
 <p class="description">{{ showCars?.description }}</p>
+<ng-template [ngIf]="!showCars?.imgURL">
+  <img src="https://www.renderhub.com/antony-kovalsky/covered-car/covered-car-01.jpg">
+</ng-template>
+
+
+<!-- <app-content-list [ngSwitch]="showCars?.imgURL">
+  <app-content-list *ngSwitchCase="!showCars?.imgURL"> 
+     <img src="https://www.renderhub.com/antony-kovalsky/covered-car/covered-car-01.jpg">  </app-content-list>
+   
+  <app-content-card *ngSwitchDefault>...</app-content-card>
+
+</app-content-list> -->
+
+
 <div class="meta-data">
   <div class="author-info">
     <span class="maker">{{ showCars?.maker }}</span>
-    <span *ngIf="showCars?.bodyStyle" class="type">{{ showCars?.bodyStyle }}</span>
+<!-- this function is working on the body style of the cars.... hover on the hatchback/ sedan / etc.. -->
+    <div *ngIf="showCars?.bodyStyle" class="type" appHoverAffect [items] = "'bodyStyle'">{{  showCars?.bodyStyle }}</div>
   </div>
+  <br>
   <div *ngIf="showCars?.tags" class="tags">
-
-    <span class="tag" *ngFor="let tag of showCars?.tags">{{ tag }}</span>
+    <span class="tag" *ngFor="let tag of showCars?.tags" appHoverAffect [items] = "'tags'">{{ tag }}</span>
   </div>
 </div>

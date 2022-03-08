@@ -31,7 +31,7 @@ export class CreateContentComponent implements OnInit {
     this.newCarEvent.emit(this.newCar);
 
     //just testing the console
-    console.log("i think it")
+    console.log("i think it works")
   }
 
 }

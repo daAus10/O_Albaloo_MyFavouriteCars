@@ -112,8 +112,8 @@ searchFunc(searchString : String): String{
   }
 
 //function that adds the car given to the showCars array to be shown on the page
-  addCarToList(newCarFromChild: Car): void {
-    this.showCars.push(newCarFromChild);
+  addCarToList(newCar: Car): void {
+    this.showCars.push(newCar);
     this.showCars = [...this.showCars];
     console.log("Cars: ", this.showCars)
   }

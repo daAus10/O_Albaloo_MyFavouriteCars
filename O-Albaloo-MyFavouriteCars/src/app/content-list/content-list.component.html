@@ -1,5 +1,12 @@
+
+<h3>Add another car</h3>
+
+<app-create-content  (newCarEvent)="addCarToList($event)"> 
+
+</app-create-content>
  
- <h3>search by the maker of the car</h3>
+
+<h3>search by the maker of the car</h3>
  <input #findMaker class="searchBar"><button (click) = "searchFunc(findMaker.value)">search</button><br><br>
 
  <div *ngIf = "searchFunc(findMaker.value) === 'nope'" class="false">{{findMaker.value}} does not Exists</div>

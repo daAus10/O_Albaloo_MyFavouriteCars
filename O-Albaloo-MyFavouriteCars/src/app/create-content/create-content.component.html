@@ -1,0 +1,42 @@
+
+
+<!-- the input fields to add the new carr properties -->
+<div>
+    ID: <input #addId type="number">
+</div>
+<div>
+    Image: <input #addModel>
+</div>
+<div>
+    description: <input #AddDescription>
+</div>
+<div>
+    maker: <input #addMaker>
+</div>
+<div>
+    body style: <input #addBody>
+</div>
+<div>
+    Tags: <input #addTags>
+</div>
+<div>
+
+    Model: <input #addImage>
+</div>
+<div>
+    <!-- the button that would call the add car function and pass all of the values given -->
+    <button (click)="addCar(addId.value,addMaker.value,
+     addImage.value, addModel.value, AddDescription.value,  
+     addBody.value,  addTags.value)">Add
+        Car</button>
+</div>
+
+<!--  id: number;
+    carName: string;
+    description: string;
+    //maker is type in the instructions
+    maker: string;
+    imgURgL?: string;
+    bodyStyle?: string;
+    tags?: string[];
+ -->

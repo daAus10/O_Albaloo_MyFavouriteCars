@@ -8,6 +8,8 @@ import { Car } from '../helper-files/Car';
 })
 export class ContentListComponent implements OnInit {
  @Input()
+ carExists?: boolean;
+
  showCars: Car[]
   Car: any;
   Display(i: number){
@@ -76,7 +78,7 @@ export class ContentListComponent implements OnInit {
           maker: "BMW",
           bodyStyle: 'Sedan',
           carName: 'E46',
-          imgURL: 'https://cdn.shopify.com/s/files/1/0570/5518/3000/articles/bmw_e46.jpg?v=1626327927',
+          imgURL: '',
           description: "Check Engine is a Feature",
           tags: ['german', 'problems', 'unreliable']
          },
@@ -107,6 +109,13 @@ searchFunc(searchString : String): String{
 }
   ngOnInit(): void {
     throw new Error('Method not implemented.');
+  }
+
+//function that adds the car given to the showCars array to be shown on the page
+  addCarToList(newCarFromChild: Car): void {
+    this.showCars.push(newCarFromChild);
+    this.showCars = [...this.showCars];
+    console.log("Cars: ", this.showCars)
   }
    }
 

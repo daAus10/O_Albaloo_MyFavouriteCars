@@ -7,21 +7,15 @@ import { Car } from '../helper-files/Car';
   styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent implements OnInit {
-
   @Input() 
   showCars?: Car;
 
   constructor() {
-    
-
   }
-
-  ngOnInit(): void {
-   
+  ngOnInit(): void {  
   }
   logId(): void{
     console.log("id: ", this.showCars?.id, " | title is: ", this.showCars?.carName);
   }
-
 }
   

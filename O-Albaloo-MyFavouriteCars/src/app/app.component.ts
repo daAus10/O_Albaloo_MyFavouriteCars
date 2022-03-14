@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CarServiceService } from './car-service.service';
 import { Car } from './helper-files/Car';
 
 @Component({
@@ -6,10 +7,19 @@ import { Car } from './helper-files/Car';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'O_Albaloo_MyFavouriteCars';
+  @Input() carService: Car[];
+  showCars!: Car[];
 
-  constructor() {
-
+  constructor(private CarServiceService: CarServiceService) {
+    this.carService = [];
 }
+ 
+ngOnInit(): void {
+  this.CarServiceService.getContentObs().subscribe(contentlist => {
+    this.showCars = contentlist; 
+   });
+
+ }
 }
